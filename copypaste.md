@@ -29,7 +29,7 @@
 
 * `foot`: 支持。
 
-**总结：**如果你想在 SSH 上进行复制和粘贴，应该把 `clipboard` 设置为 `terminal` ，并确保你的终端支持OSC 52。
+**总结：** 如果你想在 SSH 上进行复制和粘贴，应该把 `clipboard` 设置为 `terminal` ，并确保你的终端支持OSC 52。
 
 # 粘贴
 
