@@ -25,7 +25,7 @@
 
 ```json
 {
-    "*.rb"。{
+    "*.rb": {
         "tabsize": 2
     },
     "tabsize": 4
