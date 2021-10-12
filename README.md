@@ -7,7 +7,7 @@
 [![Join the chat at https://gitter.im/zyedidia/micro](https://badges.gitter.im/zyedidia/micro.svg)](https://gitter.im/zyedidia/micro?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Snap Status](https://snapcraft.io/micro/badge.svg)](https://snapcraft.io/micro)
 
-**micro** 是一个基于终端的文本编辑器，它的目标是易于使用和直观，同时也采取了现代终端的优点。它是一个单一的、自给自足的、静态的，没有任何依赖性的二进制文件；你现在就可以下载并使用它。
+**micro** 是一个基于终端的文本编辑器，它的目标是易于使用和直观，同时也采取了现代终端的优点。它是一个单一的、自给自足的、静态的，没有任何依赖性的二进制文件；现在就来下载使用吧。
 
 人如其名，micro 旨在通过易于安装和使用的特点，从而成为 nano 编辑器的继承者。
 它致力于成为那些喜欢在终端中工作的人或经常使用 SSH 编辑文件的人的全能编辑器。
