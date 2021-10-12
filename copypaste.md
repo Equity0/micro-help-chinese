@@ -8,10 +8,10 @@
 然而，有些终端模拟器对终端剪贴板(使用 OSC 52 协议来通信剪贴板内容)的支持是有限的。
 下面是一些终端模拟器对该协议的支持情况。
 
-* Kitty：支持，但默认情况下只启用了写入。要启用读取的话，
+* `Kitty`：支持，但默认情况下只启用了写入。要启用读取的话，
   请将 `read-primary` 和 `read-clipboard` 添加到 `clipboard_control` 选项。
 
-* iTerm2：只支持复制（写到剪贴板）。
+* `iTerm2`：只支持复制（写到剪贴板）。
   必须在 `Preferences->General-> Selection->Applications in terminal may access clipboard` 中启用后，
   才可以使用 Command-v 来粘贴。
 
