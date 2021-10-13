@@ -160,6 +160,15 @@ sudo mv micro /usr/local/bin # optional
 
 ### 全静态二进制文件
 
+默认情况下，micro 二进制文件将与核心系统库进行动态链接（为了安全和可移植性，通常推荐这样做）。然而，有一个完全静态的预构建二进制文件，以 `linux-static.tar.gz` 的形式提供给 amd64，
+要从源码构建一个全静态二进制文件，运行
+
+```sh
+CGO_ENABLED=0 make build
+```
+
+### macOS 终端
+
 如果你使用的是 macOS ，你应该考虑使用 [iTerm2](http://iterm2.com/) 而不是默认终端（ Terminal.app ）。
 iTerm2 终端对鼠标的支持要好得多，而且对按键事件的处理也更好。为了获得最佳的键盘绑定行为，请在 `Preferences->Profiles->Keys->Presets...` 中选择 `xterm defaults` ，并在同一菜单中选择 `Esc+` 作为 `Left Option Key` 。最新版本还支持真彩色。
 
