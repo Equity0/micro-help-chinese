@@ -122,7 +122,7 @@ brew install micro --classic
 
 **Linux 用户注意：** 为了与本机系统剪切板配合，必须安装 `xclip` 或 `xsel` 。详情请查看页面下方的 [Linux 剪贴板支持](#Linux-剪贴板支持)
 
-Micro 也可以通过 Linux 上的软件包管理器比如 dnf , AUR , Nix ,以及其他操作系统的包管理器。但这些软件包不保证时最新版。
+Micro 也可以通过 Linux 上的软件包管理器比如 dnf , AUR , Nix ,以及其他操作系统的包管理器。但这些软件包不保证是最新版。
 
 <!-- * `apt install micro` ( Ubuntu 20.04 'focal' 和 Debian `unstable | testing | buster-backports` )。目前这个包(2.0.1-1) 已经过期并且在调试模式中有一个已知错误。-->
 
