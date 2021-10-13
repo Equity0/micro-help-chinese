@@ -43,7 +43,7 @@
 - 易于安装和使用。
 - 无依赖性或其他外部文件 - 只需要你下载页面下方的软件。
 - 多个游标。
-- 常见快捷键( <kbd>Ctrl-s</kbd>, <kbd>Ctrl-c</kbd>, <kbd>Ctrl-v</kbd>, <kbd>Ctrl-z</kbd> , ...)。
+- 常见快捷键 ( <kbd>Ctrl-s</kbd>, <kbd>Ctrl-c</kbd>, <kbd>Ctrl-v</kbd>, <kbd>Ctrl-z</kbd> , ...)。
   - 也可以自定义快捷键。
 - 合理的默认设置。
   - 开箱即用，无需过多配置（配置起来也很容易）。
@@ -52,7 +52,7 @@
 - 惊艳的鼠标支持。
   - 可以用鼠标拖动选中文本，双击选中文字，三击选中行。
 - 跨平台（在所有可以运行 Go 的平台）。
-  - 注意，虽然 Windows 支持 Mingw/Cygwin ，但不支持（见下文）。
+  - 注意，虽然 Windows 支持 Mingw/Cygwin，但不支持（见下文）。
 - 插件系统（插件采用 Lua 编写）。
   - micro 拥有内置插件管理器来帮助你自动安装，卸载和更新插件。
 - 内置 diff gutter 。
@@ -68,4 +68,44 @@
 - 易于配置。
 - 支持宏。
 - 常见的编辑器功能，如撤销/重做，显示行数，Unicode 支持，自动换行, ...
+
+## 安装
+
+要安装 micro，你可以直接下载预构建二进制文件，或从源代码自己编译。
+
+如果你想了解更多关于如何安装 micro 的方式，请看这个 [wiki 页面](https://github.com/yi0322/micro-help-chinese/wiki/%E5%AE%89%E8%A3%85-Micro)
+
+安装完成后使用 `micro -version` 来获取版本信息。只有你采用预编制二进制文件、Homebrew 或 snap 安装，才能保证你安装的是最新的稳定版本。
+
+在 [assets/packaging](https://github.com/zyedidia/micro/tree/master/assets/packaging) 目录中可以找到一个 `.desktop` 文件和一个 `man page`。
+
+### 预编译二进制文件
+
+预编译二进制文件随 [release](https://github.com/zyedidia/micro/releases) 一起发布。
+
+要卸载 micro ，只需要删除二进制文件，以及 `~/.config/micro` 的配置目录。
+
+#### 快速安装脚本
+
+```bash
+curl https://getmic.ro | bash
+```
+
+该脚本将 micro 二进制文件安装到当前目录中。你可以把该文件移动到你选择的目录（比如 `sudo mv micro /usr/bin`）。更多信息可查看 [Github repository](https://github.com/benweissmann/getmic.ro)
+
+#### Eget
+
+安装 [Eget](https://github.com/zyedidia/eget) 后，你可以很容易得到一个预编译二进制文件：
+
+```sh
+eget zyedidia/micro
+```
+
+使用 `--tag VERSION` 来下载一个特定版本。
+
+```
+eget --tag nightly zyedidia/micro # download the nightly version (compiled every day at midnight UTC)
+eget --tag v2.0.8 zyedidia/micro  # download version 2.0.8 rather than the latest release
+```
+
 
