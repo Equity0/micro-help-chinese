@@ -28,8 +28,8 @@
   - [软件包管理器](#软件包管理器)
   - [从源代码构建](#从源代码构建)
   - [全静态二进制文件](#全静态二进制文件)
-  - [macOS 终端](#macOS终端)
-  - [支持 Linux 剪贴板](#支持Linux剪贴板)
+  - [macOS 终端](#macOS%20终端)
+  - [Linux 剪贴板支持](#Linux%20剪贴板支持)
   - [颜色和语法高亮](#颜色和语法高亮)
   - [Cygwin, Mingw, Plan9](#cygwin-mingw-plan9)
 - [用法](#用法)
@@ -108,4 +108,63 @@ eget --tag nightly zyedidia/micro # download the nightly version (compiled every
 eget --tag v2.0.8 zyedidia/micro  # download version 2.0.8 rather than the latest release
 ```
 
+你可以给 `eget` 命令添加 `--to /usr/local/in` 选项来安装 `micro`，或者在安装后手动将 `micro` 移动到你的 `$PATH` 里。
 
+参考 [Eget](https://github.com/zyedidia/eget) 获取更多信息。
+
+### 软件包管理器
+
+你在 Mac 上可以通过 Homebrew 安装 micro ：
+
+```
+brew install micro --classic
+```
+
+**Linux 用户注意：**为了与本机系统剪切板配合，必须安装 `xclip` 或 `xsel` 。详情请查看页面下方的 [Linux 剪贴板支持](#Linux%20剪贴板支持)
+
+Micro 也可以通过 Linux 上的软件包管理器比如 dnf , AUR , Nix ,以及其他操作系统的包管理器。但这些软件包不保证时最新版。
+
+<!-- * `apt install micro` ( Ubuntu 20.04 'focal' 和 Debian `unstable | testing | buster-backports` )。目前这个包(2.0.1-1) 已经过期并且在调试模式中有一个已知错误。-->
+
+* Liunx: 在特定发行版的软件包管理可用。
+    * `dnf install micro` (Fedora)
+    * `pacman -S micro` (Arch Linux)
+    * `eopkg install micro` (Solus)
+    * 查看 [wiki](https://github.com/yi0322/micro-help-chinese/wiki/%E5%AE%89%E8%A3%85-Micro#crux) 以获取关于 CRUX, Termux 的更多信息。
+* Windows: [Chocolatey](https://chocolatey.org) 和 [Scoop](https://github.com/lukesampson/scoop).
+    * `choco install micro`
+    * `scoop install micro`
+* openBSD: 可在 ports 树中找到，也可作为二进制包来使用。
+    * `pkg_add -v micro`
+* NetBSD ， macOS ， Linux ， Illumos 等，使用[pkgsrc](http://www.pkgsrc.org/)-current。
+    * `pkg_add micro`
+
+### 从源代码构建
+
+如果你的操作系统没有二进制包版本，但可以运行 Go ，你可以自己从源码构建。
+
+确保你使用的 Go 版本号为 1.11 或更高，并且 Go 模块已经启动。
+
+```sh
+git clone https://github.com/zyedidia/micro
+cd micro
+make build
+sudo mv micro /usr/local/bin # optional
+```
+
+编译好的二进制文件将被放置在当前目录下，并可以移动到你喜欢的任何地方（例如 `/usr/local/bin`）。
+
+使用 `make install` 将安装二进制文件到 `$GOPATH/bin` 或 `$GOBIN` 。
+
+你可以直接用 `go get` 来安装（`go get github.com/zyedidia/micro/cmd/micro`），但这并不被推荐，因为它在构建 micro 时没有版本信息（插件管理器需要用到此信息），而且不能禁用调试模式。
+
+### 全静态二进制文件
+
+如果你使用的是 macOS ，你应该考虑使用 [iTerm2](http://iterm2.com/) 而不是默认终端（ Terminal.app ）。
+iTerm2 终端对鼠标的支持要好得多，而且对按键事件的处理也更好。为了获得最佳的键盘绑定行为，请在 `Preferences->Profiles->Keys->Presets...` 中选择 `xterm defaults` ，并在同一菜单中选择 `Esc+` 作为 `Left Option Key` 。最新版本还支持真彩色。
+
+如果你仍然坚持使用默认的Mac终端，一定确保在 `Preferences->Profiles->Keyboard` 中设置 `Use Option key as Meta key`，将 <kbd>option</kbd> 作为 <kbd>alt</kbd> 。
+
+### Linux%20剪贴板支持
+
+在 Linux 上，剪贴板支持需要：
