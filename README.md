@@ -108,7 +108,7 @@ eget --tag nightly zyedidia/micro # download the nightly version (compiled every
 eget --tag v2.0.8 zyedidia/micro  # download version 2.0.8 rather than the latest release
 ```
 
-你可以给 `eget` 命令添加 `--to /usr/local/in` 选项来安装 `micro`，或者在安装后手动将 `micro` 移动到你的 `$PATH` 里。
+你可以给 `eget` 命令添加 `--to /usr/local/bin` 选项来安装 `micro`，或者在安装后手动将 `micro` 移动到你的 `$PATH` 里。
 
 参考 [Eget](https://github.com/zyedidia/eget) 获取更多信息。
 
@@ -120,7 +120,7 @@ eget --tag v2.0.8 zyedidia/micro  # download version 2.0.8 rather than the lates
 brew install micro --classic
 ```
 
-**Linux 用户注意：**为了与本机系统剪切板配合，必须安装 `xclip` 或 `xsel` 。详情请查看页面下方的 [Linux 剪贴板支持](#Linux-剪贴板支持)
+**Linux 用户注意：** 为了与本机系统剪切板配合，必须安装 `xclip` 或 `xsel` 。详情请查看页面下方的 [Linux 剪贴板支持](#Linux-剪贴板支持)
 
 Micro 也可以通过 Linux 上的软件包管理器比如 dnf , AUR , Nix ,以及其他操作系统的包管理器。但这些软件包不保证时最新版。
 
