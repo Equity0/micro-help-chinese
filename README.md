@@ -43,7 +43,7 @@
 - 易于安装和使用。
 - 无依赖性或其他外部文件 - 只需要你下载页面下方的软件。
 - 多个游标。
-- 常见快捷键 (<kbd>Ctrl-s</kbd>, <kbd>Ctrl-c</kbd>, <kbd>Ctrl-v</kbd>, <kbd>Ctrl-z</kbd>, ...)。
+- 常见快捷键( <kbd>Ctrl-s</kbd>, <kbd>Ctrl-c</kbd>, <kbd>Ctrl-v</kbd>, <kbd>Ctrl-z</kbd> , ...)。
   - 也可以自定义快捷键。
 - 合理的默认设置。
   - 开箱即用，无需过多配置（配置起来也很容易）。
