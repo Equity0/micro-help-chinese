@@ -28,7 +28,7 @@
   - [软件包管理器](#软件包管理器)
   - [从源代码构建](#从源代码构建)
   - [全静态二进制文件](#全静态二进制文件)
-  - [macOS 终端](#macOS%20终端)
+  - [macOS 终端](#macOS-终端)
   - [Linux 剪贴板支持](#Linux-剪贴板支持)
   - [颜色和语法高亮](#颜色和语法高亮)
   - [Cygwin, Mingw, Plan9](#cygwin-mingw-plan9)
@@ -120,7 +120,7 @@ eget --tag v2.0.8 zyedidia/micro  # download version 2.0.8 rather than the lates
 brew install micro --classic
 ```
 
-**Linux 用户注意：**为了与本机系统剪切板配合，必须安装 `xclip` 或 `xsel` 。详情请查看页面下方的 [Linux 剪贴板支持](#Linux%20剪贴板支持)
+**Linux 用户注意：**为了与本机系统剪切板配合，必须安装 `xclip` 或 `xsel` 。详情请查看页面下方的 [Linux 剪贴板支持](#Linux-剪贴板支持)
 
 Micro 也可以通过 Linux 上的软件包管理器比如 dnf , AUR , Nix ,以及其他操作系统的包管理器。但这些软件包不保证时最新版。
 
