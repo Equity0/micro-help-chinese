@@ -209,7 +209,7 @@ ifconfig | micro
 ## 文档和帮助
 
 micro 拥有内置帮助系统，你可以通过按键 <kbd>Ctrl-e</kbd> 然后输入 `help` 来打开它，此外你也可以在这里浏览帮助文件：
-- [main help](https://github.com/yi0322/micro-help-chinese/blob/main/help.md)
+- [Micro 帮助文档](https://github.com/yi0322/micro-help-chinese/blob/main/help.md)
 - [keybindings](https://github.com/yi0322/micro-help-chinese/blob/main/keybindings.md)
 - [commands](https://github.com/yi0322/micro-help-chinese/blob/main/commands.md)
 - [colors](https://github.com/yi0322/micro-help-chinese/blob/main/colors.md)
