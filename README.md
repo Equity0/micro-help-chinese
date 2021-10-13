@@ -30,7 +30,7 @@
   - [全静态二进制文件](#全静态二进制文件)
   - [macOS 终端](#macOS-终端)
   - [Linux 剪贴板支持](#Linux-剪贴板支持)
-  - [颜色和语法高亮](#颜色和语法高亮)
+  - [颜色方案和语法高亮](#颜色方案和语法高亮)
   - [Cygwin, Mingw, Plan9](#cygwin-mingw-plan9)
 - [用法](#用法)
 - [文档和帮助](#文档和帮助)
@@ -168,3 +168,62 @@ iTerm2 终端对鼠标的支持要好得多，而且对按键事件的处理也�
 ### Linux 剪贴板支持
 
 在 Linux 上，剪贴板支持需要：
+- 在 X11 上，安装 `xclip` 或 `xsel` (对 Ubuntu : `sudo apt install xclip`)
+- 在 Wayland，安装 `wl-clipboard`
+
+如果你没有安装这些软件， micro 将会使用内部剪贴板来复制和粘贴，但它不会与外部程序一起工作。
+
+### 颜色方案和语法高亮
+
+如果你打开 micro 并发现语法高亮不起作用，那大概是因为你在使用的终端不支持 256 颜色模式。
+请尝试改变颜色方案为 `simple` ，请打开 micro 后按 <kbd>Ctrl-e</kbd> 然后输入 `set colorscheme simple`。
+
+如果你使用的是 Ubuntu 默认终端，请确保你的 `TERM` 变量设置为 `xterm-256color` 以启用 256 色支持。
+
+很多窗口终端不支持超过16色，这意味着 micro 的默认颜色方案看起来不会那么好看。你可以将颜色方案设置为 `simple`，或者下载和配置一个更好的终端模拟器来替代默认终端。
+
+### Cygwin, Mingw, Plan9
+
+不幸的是，Cygwin 、 Mingw 和 Plan9 都没有得到官方支持。在 Cygwin和 Mingw 中，使用 `winpty` 工具运行时， micro 通常可以工作。
+
+```
+winpty micro.exe ...
+```
+
+Micro 使用了不起的 [tcell库](https://github.com/gdamore/tcell) ，但这这意味着 micro 被限制在 tcell 支持的平台上。因此， micro 不支持 Plan9 和 Cygwin （尽管这在将来可能会改变）。Micro 也不支持 NaCl （反正已经被废弃了）。
+
+## 用法
+
+一旦你拥有了编辑器，你可以通过运行 `micro path/to/file.txt` 打开文件，或运行 `micro` 打开一个空缓冲区。
+
+micro 同样支持从 `stdin` 创建缓冲区。
+
+```sh
+ifconfig | micro
+```
+
+你可以用方向键和鼠标来移动光标。
+
+同样可以使用鼠标来操作文本。点击和拖动鼠标将选中文本。你也可以双击鼠标选中词和三击鼠标选中一行。
+
+## 文档和帮助
+
+micro 拥有内置帮助系统，你可以通过按键 <kbd>Ctrl-e</kbd> 然后输入 `help` 来打开它，此外你也可以在这里浏览帮助文件：
+- [main help](https://github.com/yi0322/micro-help-chinese/blob/main/help.md)
+- [keybindings](https://github.com/yi0322/micro-help-chinese/blob/main/keybindings.md)
+- [commands](https://github.com/yi0322/micro-help-chinese/blob/main/commands.md)
+- [colors](https://github.com/yi0322/micro-help-chinese/blob/main/colors.md)
+- [options](https://github.com/yi0322/micro-help-chinese/blob/main/options.md)
+- [plugins](https://github.com/yi0322/micro-help-chinese/blob/main/plugins.md)
+
+我还建议阅读[教程](https://github.com/yi0322/micro-help-chinese/blob/main/tutorial.md)，这里简要介绍了 micro 提供的更加强大的配置功能。
+
+## 贡献
+
+如果你发现任何 bugs，请告诉我！我也很乐意接受任何人的 PR 。
+
+你可以使用 [GitHub issue tracker](https://github.com/zyedidia/micro/issues) 来报告 bugs， 提出问题，或建议新的功能。
+
+如果想在一个更非正式的环境中讨论此编辑器，你可以加入 [Gitter chat](https://gitter.im/zyedidia/micro)。
+
+有时候我没有回应，我很抱歉！如果发生这种情况的话请与我联系。
