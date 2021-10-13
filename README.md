@@ -199,7 +199,7 @@ iTerm2 终端对鼠标的支持要好得多，而且对按键事件的处理也�
 winpty micro.exe ...
 ```
 
-Micro 使用了不起的 [tcell库](https://github.com/gdamore/tcell) ，但这这意味着 micro 被限制在 tcell 支持的平台上。因此， micro 不支持 Plan9 和 Cygwin （尽管这在将来可能会改变）。Micro 也不支持 NaCl （反正已经被废弃了）。
+Micro 使用了不起的 [tcell 库](https://github.com/gdamore/tcell) ，但这这意味着 micro 被限制在 tcell 支持的平台上。因此， micro 不支持 Plan9 和 Cygwin （尽管这在将来可能会改变）。Micro 也不支持 NaCl （反正已经被废弃了）。
 
 ## 用法
 
