@@ -1,3 +1,12 @@
+因为 micro 的帮助文档是运行时加载的，所以很简单就可以将 micro 中的帮助文档替换为中文：
+
+```sh
+git clone https://github.com/yi0322/micro-help-chinese.git && \
+cd ./micro-help-chinese && mv ./help ~/.config/micro/
+```
+
+------
+
 <img alt="micro logo" src="https://github.com/zyedidia/micro/blob/master/assets/micro-logo.svg" width="500px"/>
 
 [![Build Status](https://travis-ci.org/zyedidia/micro.svg?branch=master)](https://travis-ci.org/zyedidia/micro)
