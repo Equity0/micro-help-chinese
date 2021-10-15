@@ -14,70 +14,80 @@ Micro 提供了以下命令以供使用，只需使用命令行 `Ctrl-e` 然后�
 
 * `save 'filename'?` : 保存当前缓冲区。如果提供了 filename ,它将另存为 filename。
 
-* `quit` : 
+* `quit` : 退出 micro。
 
-* `goto 'line'` :
+* `goto 'line'` : 跳转到指定行。可以使用负数跳转到倒数第几行。例如 -5 就是跳转到倒数第 5 行。
 
-* `replace 'search' 'value' 'flags'?` :
+* `replace 'search' 'value' 'flags'?` : 使用 `vaule` 替换 `vaule` 。
+   `flags` 是可选项，可以选择的参数有：
+   * `-a` ：一次替换所有匹配项。
+   * `-l` ：使用文本搜索而不是正则搜索。
 
-* `replaceall 'search' 'value'` :
+   注意 `searh` 必须是一个可用的正则表达式（除非你加了 `-l` 参数）。如果参数中不含空格，你可以不用引号。
 
-* `set 'option' 'value'` :
+* `replaceall 'search' 'value'` : 一次性用 `value` 替换 `search`。
 
-* `setlocal 'option' 'value'` :
+* `set 'option' 'value'` : 设置选项值为 `value`。查看 `options` 帮助主题来获取你可以设置的选项。
+   这个命令会修改 `settings.json` 文件。
 
-* `show 'option'` :
+* `setlocal 'option' 'value'` : 本地设置选项值（这个设置只在当前缓冲区有效）。这个命令不会修改 `settings.json` 。
 
-* `run 'sh-command'` :
+* `show 'option'` : 查看指定选项的当前值。
 
-* `vsplit 'filename'` :
+* `run 'sh-command'` : 在后台运行给定的 shell 命令。该命令在完成后会显示输出值。
 
-* `hsplit 'filename'` : 
+* `vsplit 'filename'` : 在新的垂直划分窗格中打开指定文件。如果没有指定文件，将会打开一个空白缓冲区。
 
-* `tab 'filename'` :
+* `hsplit 'filename'` : 与 `vsplit` 类似，不过是水平窗格。
 
-* `tabmove '[-+]?n'` :
+* `tab 'filename'` : 在新标签页打开指定文件。
 
-* `tabswitch 'tab'` :
+* `tabmove '[-+]?n'` : 把当前活动标签页移动到另一格。`n` 是一个整数，
+   如果 `n` 前带有 `-` 或 `+` 前缀，表示的是相对位置（例如， `tabmove +2` 表示右移 `2` 格）。
+   如果 `n` 前没有前缀，它表示的是一个绝对值（例如，`tabmove 2` 将把标签页移动到第二个位置）。
+   
+* `tabswitch 'tab'` : 切换到指定的标签页。`tab` 可以是标签所在位置的数字，也可以是标签名。
 
-* `textfilter 'sh-command'` :
+* `textfilter 'sh-command'` : 对选中的文本执行输入的 `shell` 命令，然后用输出值来替换选中的文本。
+   比如，想要对一组数字排序，先选中它们，然后执行 `> textfilter sort -n`。
 
-* `log` : 
+* `log` : 打开一个包含所有信息和调试信息的日志。
 
-* `plugin list` : 
+* `plugin list` : 显示所有已经安装的插件。
 
-* `plugin install 'pl'` :
+* `plugin install 'pl'` : 安装插件。
 
-* `plugin remove 'pl'` :
+* `plugin remove 'pl'` : 卸载插件。
 
-* `plugin update 'pl'` :
+* `plugin update 'pl'` : 更新插件（如果不提供指定插件，将更新所有插件）。
 
-* `plugin search 'pl'` : 
+* `plugin search 'pl'` : 搜索插件。
 
-* `plugin available` : 
+* `plugin available` : 显示所有可以安装的插件。
 
-* `reload` :
+* `reload` : 重新加载运行时文件。
 
-* `cd 'path'` :
+* `cd 'path'` : 改变工作目录到指定的 `path` 。
 
-* `pwd` : 
+* `pwd` : 显示当前工作目录。
 
-* `open 'filename'` :
+* `open 'filename'` : 在当前缓冲区打开指定文件。
 
-* `reset 'option'` : 
+* `reset 'option'` : 还原指定选项为默认值。
 
-* `retab` : 
+* `retab` : 替换文档中每行开头的 tabs （制表符）为空格，或所有空格为 tabs ，取决于你的设置值 `tabstospaces` 。
 
-* `raw` : 
+* `raw` : micro 将打开一个新的标签，并显示它从终端收到的每个事件的转义顺序。
+   这会向你展示了 micro 从终端实际看到的情况，并帮助你看到哪些绑定是不可能实现的以及为什么。这对于调试键盘绑定是非常有用的。 
 
-* `showkey` : 
+* `showkey` : 显示与指定快捷键绑定的操作。例如运行 `> showkey Ctrl-c` 会显示 `Copy` 。
 
-* `term exec?` :
+* `term exec?` : 打开一个新的终端模拟器运行可执行文件。如果没有指定可执行文件，它会在终端模拟器打开一个默认 shell。
 
 ---
 
 以下命令由默认加载的插件提供：
 
-* `lint` : 
-* `comment` : 
+* `lint` : 对当前文件的错误进行提示。
+* `comment` : 为当前行或选择文本进行注释或取消注释。 
 
