@@ -7,6 +7,12 @@ git clone https://github.com/yi0322/micro-help-chinese.git && \
 cd ./micro-help-chinese && mv ./help ~/.config/micro/
 ```
 
+Gitee
+```sh
+git clone https://gitee.com/dizyi/micro-help-chinese.git && \
+cd ./micro-help-chinese && mv ./help ~/.config/micro/
+```
+
 ------
 
 [<img alt="micro logo" src="https://github.com/zyedidia/micro/blob/master/assets/micro-logo.svg" width="500px"/>](https://micro-editor.github.io)
