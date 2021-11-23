@@ -237,14 +237,14 @@ ifconfig | micro
 ## 文档和帮助
 
 micro 拥有内置帮助系统，你可以通过按键 <kbd>Ctrl-e</kbd> 然后输入 `help` 来打开它，此外你也可以在这里浏览帮助文件：
-- [帮助](https://github.com/yi0322/micro-help-chinese/blob/main/help.md)
-- [keybindings](https://github.com/yi0322/micro-help-chinese/blob/main/keybindings.md)
-- [commands](https://github.com/yi0322/micro-help-chinese/blob/main/commands.md)
-- [colors](https://github.com/yi0322/micro-help-chinese/blob/main/colors.md)
-- [options](https://github.com/yi0322/micro-help-chinese/blob/main/options.md)
-- [plugins](https://github.com/yi0322/micro-help-chinese/blob/main/plugins.md)
+- [help](https://github.com/yi0322/micro-help-chinese/blob/main/help/help.md)
+- [keybindings](https://github.com/zyedidia/micro/tree/master/runtime/help/keybindings.md)
+- [commands](https://github.com/zyedidia/micro/tree/master/runtime/help/commands.md)
+- [colors](https://github.com/zyedidia/micro/tree/master/runtime/help/colors.md)
+- [options](https://github.com/zyedidia/micro/tree/master/runtime/help/options.md)
+- [plugins](https://github.com/zyedidia/micro/tree/master/runtime/help/plugins.md)
 
-我还建议阅读[教程](https://github.com/yi0322/micro-help-chinese/blob/main/tutorial.md)，这里简要介绍了 micro 提供的更加强大的配置功能。
+我还建议阅读[教程](https://github.com/yi0322/micro-help-chinese/blob/main/help/tutorial.md)，这里简要介绍了 micro 提供的更加强大的配置功能。
 
 ## 贡献
 
