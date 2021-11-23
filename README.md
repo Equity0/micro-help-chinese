@@ -155,6 +155,8 @@ Micro 也可以通过 Linux 上的软件包管理器比如 dnf , AUR , Nix ,以�
     * `pkg_add -v micro`
 * NetBSD ， macOS ， Linux ， Illumos 等，使用[pkgsrc](http://www.pkgsrc.org/)-current。
     * `pkg_add micro`
+* macOS 使用 [MacPorts](https://www.macports.org):
+    * `sudo port install micro`
 
 ### 从源代码构建
 
