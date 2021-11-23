@@ -11,6 +11,8 @@ Micro 提供了以下命令以供使用，只需使用命令行 `Ctrl-e` 然后�
 * `bind 'key' 'action'` : 将快捷键绑定到操作。请查看 `keybindings` 文档来获取更多有关键位绑定的信息。这个命令会修改 `bindings.json` 文件，并覆盖已绑定的键位。
 
 * `help 'topic'?` : 打开相应的帮助主题。如果没有提供主题会打开默认的帮助页面。
+  帮助主题以 `.md` 的格式存储在源代码目录中的 `runtime/help` 目录下，
+  它会被嵌入至最终的二进制运行文件中。
 
 * `save 'filename'?` : 保存当前缓冲区。如果提供了 filename ,它将另存为 filename。
 
